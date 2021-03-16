@@ -8,10 +8,13 @@ composer create-project --prefer-dist laravel/laravel blog
 ## criar model Student factory StudentFactory e seed StudentSeeder
 ```
 php artisan make:model Student -fs
-``´
+```
 
 ## criar model Blog e migration com flag -m
+```
 php artisan make:model Blog -m
+```
+
 
 ## criar schema da base de dados database\migrations\2021_03_16_121942_create_blogs_table.php
 ```
@@ -25,12 +28,16 @@ php artisan make:model Blog -m
 ```        
 
 ## adicionar campos no model app\Models\Blog.php
+```
 protected $fillable = ['title', 'description', 'auther_name'];
+```
 
 
 
 ## criar seeder BlogSeeder database\seeders\BlogSeeder.php
+```
 php artisan make:seeder BlogSeeder
+```
 
 ## adicionar faker e model  database\seeders\BlogSeeder.php
 ```
@@ -51,7 +58,9 @@ use App\Models\Blog;
         }
 ```        
 ## fazer seed com a class BlogSeeder database\seeders\BlogSeeder.php
+```
 php artisan db:seed --class=BlogSeeder
+```
 
 
 ### databaseseeder.php
