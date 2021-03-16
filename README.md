@@ -5,6 +5,11 @@ exemplos com faker e seeders
 ## instalar laravel 8
 composer create-project --prefer-dist laravel/laravel blog
 
+## criar model Student factory StudentFactory e seed StudentSeeder
+```
+php artisan make:model Student -fs
+``´
+
 ## criar model Blog e migration com flag -m
 php artisan make:model Blog -m
 
