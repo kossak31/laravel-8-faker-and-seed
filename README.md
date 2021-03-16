@@ -47,3 +47,21 @@ use App\Models\Blog;
 ```        
 ## fazer seed com a class BlogSeeder database\seeders\BlogSeeder.php
 php artisan db:seed --class=BlogSeeder
+
+
+### databaseseeder.php
+```
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+
+   DB::table('users')->insert([
+            'name' => Str::random(10),
+            'email' => Str::random(10) . '@gmail.com',
+            'password' => Hash::make('password'),
+        ]);
+
+        $this->call([
+            BlogSeeder::class,     
+        ]);
+```        
